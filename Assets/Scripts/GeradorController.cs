@@ -21,7 +21,12 @@ public class GeradorController : MonoBehaviour
 
     // Pontos
     private float pontos = 0f;
-    [SerializeField] private Text pontosText;
+    [SerializeField]private Text pontosText;
+
+    //level
+    private int level = 1;
+    private float pontosLevelMax = 5f;
+    [SerializeField] private Text levelText;
 
     // Start is called before the first frame update
     void Start()
@@ -33,8 +38,9 @@ public class GeradorController : MonoBehaviour
     void Update()
     {
         CriaObstaculo();
+        ProximoLevel();
         ContadorPontos();
-
+        
     }
 
 
@@ -57,5 +63,17 @@ public class GeradorController : MonoBehaviour
     {
         pontos += Time.deltaTime;
         pontosText.text = Mathf.Round(pontos).ToString();
+    }
+
+    private void ProximoLevel()
+    {
+        if(pontos >= pontosLevelMax)
+        {
+            level++;
+            pontosLevelMax *= 2;
+            levelText.text = level.ToString();
+        }
+        Debug.Log(pontosLevelMax);
+        Debug.Log(level);
     }
 }

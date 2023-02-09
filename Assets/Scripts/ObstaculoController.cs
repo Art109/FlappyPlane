@@ -9,17 +9,25 @@ public class ObstaculoController : MonoBehaviour
 
     [SerializeField] private GameObject eu;
 
+    [SerializeField] private GameController game;
+
 
     // Start is called before the first frame update
     void Start()
     {
         Destroy(eu, 6f);
+
+        game = FindObjectOfType<GameController>();
+
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         Movimento();
+
+        speed = 4f + game.getLevel();
     }
 
     private void Movimento()

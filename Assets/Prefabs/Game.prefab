@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6535796882166845002
+--- !u!1 &5516060897364575755
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7692028693032299403}
-  - component: {fileID: 1074096749}
+  - component: {fileID: 7100826543690551535}
+  - component: {fileID: 1085893042686784719}
   m_Layer: 0
-  m_Name: Gerador
+  m_Name: Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7692028693032299403
+--- !u!4 &7100826543690551535
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6535796882166845002}
+  m_GameObject: {fileID: 5516060897364575755}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.550916, y: -0.8071912, z: 0.081922114}
+  m_LocalPosition: {x: 531.0476, y: 292.93814, z: -6.2966337}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1074096749
+--- !u!114 &1085893042686784719
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6535796882166845002}
+  m_GameObject: {fileID: 5516060897364575755}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa48cbd5ba9c3b540a8cba356b39a635, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b6ad6b3fae2bb54ea3ea4fb386bf238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   posicao: {x: 2.5, y: 0, z: 0}
   obstaculo: {fileID: 4785990625661178261, guid: 76c8ec1236e8ad84383cee2f0c394a88, type: 3}
+  pontosText: {fileID: 0}
+  levelText: {fileID: 0}

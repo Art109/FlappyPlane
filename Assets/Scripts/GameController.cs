@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GeradorController : MonoBehaviour
+public class GameController : MonoBehaviour
 {
 
     //Inicializando o Timer
     private float timer = 1f;
 
     //Posição do inicio do obstaculo
-    [SerializeField]private Vector3 posicao ;
+    [SerializeField] private Vector3 posicao;
 
     // Limites dos obstaculos
     private float posMin = -1.87f;
@@ -21,7 +21,7 @@ public class GeradorController : MonoBehaviour
 
     // Pontos
     private float pontos = 0f;
-    [SerializeField]private Text pontosText;
+    [SerializeField] private Text pontosText;
 
     //level
     private int level = 1;
@@ -31,7 +31,7 @@ public class GeradorController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -40,22 +40,22 @@ public class GeradorController : MonoBehaviour
         CriaObstaculo();
         ProximoLevel();
         ContadorPontos();
-        
+
     }
 
 
-    private void CriaObstaculo() 
+    private void CriaObstaculo()
     {
         timer -= Time.deltaTime;
 
         if (timer <= 0f)
         {
 
-            posicao.y = Random.Range(posMin, posMax);
+            posicao.y = Random.Range(posMin/level, posMax);
 
-            Instantiate(obstaculo, posicao , Quaternion.identity);
+            Instantiate(obstaculo, posicao, Quaternion.identity);
 
-            timer = Random.Range(1f,2f);
+            timer = Random.Range(1f, 2f);
         }
     }
 
@@ -67,13 +67,18 @@ public class GeradorController : MonoBehaviour
 
     private void ProximoLevel()
     {
-        if(pontos >= pontosLevelMax)
+        if (pontos >= pontosLevelMax)
         {
             level++;
             pontosLevelMax *= 2;
-            levelText.text = level.ToString();
+           
         }
-        Debug.Log(pontosLevelMax);
-        Debug.Log(level);
+        levelText.text = level.ToString();
+  
+    }
+
+    public int getLevel()
+    {
+        return level;
     }
 }

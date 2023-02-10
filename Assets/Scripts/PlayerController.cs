@@ -12,10 +12,25 @@ public class PlayerController : MonoBehaviour
     //Velocida
     private float speed = 5f;
 
+
+    //Transform
+    private Transform meuTransform;
+
+    //Altura Limite
+    private float limiteAltura = 5.5f ;
+
+    //Fumaça
+    [SerializeField] private GameObject fumaca;
+    private Vector3 fumacaPos;
+
     // Start is called before the first frame update
     void Start()
     {
         meuRB = GetComponent<Rigidbody2D>();
+
+        meuTransform = GetComponent<Transform>();
+
+        fumacaPos = meuTransform.position;
     }
 
     // Update is called once per frame
@@ -25,7 +40,10 @@ public class PlayerController : MonoBehaviour
 
         limitadorVelocidade();
 
-    
+        if(meuTransform.position.y >= limiteAltura || meuTransform.position.y <= -limiteAltura)
+        {
+            SceneManager.LoadScene("Jogo");
+        }
         
     }
 
@@ -42,7 +60,12 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             meuRB.velocity = Vector2.up * speed;
+
+            Instantiate(fumaca);
+
+            
         }
+        Destroy(fumaca, 1f);
     }
 
 

@@ -27,11 +27,17 @@ public class GameController : MonoBehaviour
     private int level = 1;
     private float pontosLevelMax = 5f;
     [SerializeField] private Text levelText;
+    [SerializeField] AudioClip levelUP;
+
+    //Posição da camera
+    private Vector3 camPos;
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
-
+       camPos = Camera.main.transform.position;
     }
 
     // Update is called once per frame
@@ -69,9 +75,13 @@ public class GameController : MonoBehaviour
     {
         if (pontos >= pontosLevelMax)
         {
+            
+
             level++;
             pontosLevelMax *= 2;
-           
+
+            AudioSource.PlayClipAtPoint(levelUP, camPos);
+
         }
         levelText.text = level.ToString();
   

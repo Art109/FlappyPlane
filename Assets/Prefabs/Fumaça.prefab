@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7269002947601451985}
-  - component: {fileID: 8572325878731625914}
   - component: {fileID: 1448687301}
   m_Layer: 0
   m_Name: "Fuma\xE7a"
@@ -34,19 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8572325878731625914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4227504323870067616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21d77ed1f3441024d961be23d03038e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eu: {fileID: 4227504323870067616}
 --- !u!95 &1448687301
 Animator:
   serializedVersion: 5
@@ -57,7 +43,7 @@ Animator:
   m_GameObject: {fileID: 4227504323870067616}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7f0cb4b624b5b8a4c98bcef5416bb36f, type: 2}
+  m_Controller: {fileID: 9100000, guid: aece63ec71c53274da3dd4e2c98d5bc5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

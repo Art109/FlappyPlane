@@ -21,7 +21,9 @@ public class PlayerController : MonoBehaviour
 
     //Fumaça
     [SerializeField] private GameObject fumaca;
+    //Devido a um bug no transform foi necessario criar essa variavel
     private Vector3 fumacaPos;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +32,6 @@ public class PlayerController : MonoBehaviour
 
         meuTransform = GetComponent<Transform>();
 
-        fumacaPos = meuTransform.position;
     }
 
     // Update is called once per frame
@@ -60,9 +61,12 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             meuRB.velocity = Vector2.up * speed;
+            fumacaPos = meuTransform.position;
+            fumacaPos.x = -17.49f;
 
-            Instantiate(fumaca);
+            GameObject meuPuf =Instantiate(fumaca, fumacaPos , Quaternion.identity) ;
 
+            Destroy(meuPuf,1f);
             
         }
         Destroy(fumaca, 1f);

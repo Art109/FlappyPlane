@@ -38,7 +38,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &7586353430776585136
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -55,7 +55,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!50 &7586353430776585138
 Rigidbody2D:
   serializedVersion: 4
@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35dc4ac61951d574a8f97040e78a2c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fumaca: {fileID: 4227504323870067616, guid: 493a055425316984196906b88750de57, type: 3}
 --- !u!61 &1406793956737957455
 BoxCollider2D:
   m_ObjectHideFlags: 0

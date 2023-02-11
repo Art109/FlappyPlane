@@ -48,3 +48,4 @@ MonoBehaviour:
   obstaculo: {fileID: 4785990625661178261, guid: 76c8ec1236e8ad84383cee2f0c394a88, type: 3}
   pontosText: {fileID: 0}
   levelText: {fileID: 0}
+  levelUP: {fileID: 8300000, guid: e06756b8ef2a9954c9e294acd98ec99e, type: 3}

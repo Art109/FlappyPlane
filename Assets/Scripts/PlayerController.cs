@@ -76,6 +76,6 @@ public class PlayerController : MonoBehaviour
     //Configurando a colisão para morte
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene("Jogo");
+        SceneManager.LoadScene(0);
     }
 }

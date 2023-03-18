@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
         if(meuTransform.position.y >= limiteAltura || meuTransform.position.y <= -limiteAltura)
         {
-            SceneManager.LoadScene("Jogo");
+            SceneManager.LoadScene(0);
         }
         
     }
@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
             fumacaPos = meuTransform.position;
             fumacaPos.x = -17.49f;
 
-            GameObject meuPuf =Instantiate(fumaca, fumacaPos , Quaternion.identity) ;
+            GameObject meuPuf =  Instantiate(fumaca, fumacaPos , Quaternion.identity) ;
 
             Destroy(meuPuf,1f);
             
